@@ -25,7 +25,7 @@ SECRET_KEY = '*lzqeu%+i$w50+9_11$69tq91$yvn12e_7u4zi7s%f_3v8^^cc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'gerenciador_tarefas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gerenciador_tarefas_db',
+        'USER': 'gt_user',
+        'PASSWORD': 'gt_user_pass',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
