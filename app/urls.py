@@ -1,6 +1,6 @@
 from django.urls import path
 from .views.tarefa_views import *
-from .views.usuario_views import *
+from .views.usuario_views import cadastrar_usuario, logar_usuario, deslogar_usuario
 
 urlpatterns = [
     path('listar_tarefas/', listar_tarefas, name='listar_tarefas'),
